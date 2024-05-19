@@ -2,6 +2,12 @@ import { fetchCars } from "@/utils";
 import { HomeProps } from "@/types";
 import { fuels, yearsOfProduction } from "@/constants";
 import { CarCard, ShowMore, SearchBar, CustomFilter, Hero } from "@/components";
+import AdDisplay from "@/components/AdDisplay";
+// import dynamic from "next/dynamic";
+
+// const AdDisplay = dynamic(() => import("@/components/AdDisplay"), {
+//   ssr: false,
+// });
 
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
@@ -17,6 +23,7 @@ export default async function Home({ searchParams }: HomeProps) {
   return (
     <main className="overflow-hidden">
       <Hero />
+      <AdDisplay />
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
