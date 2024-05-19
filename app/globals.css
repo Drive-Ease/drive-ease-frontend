@@ -63,6 +63,14 @@
 }
 /* END: Hero styles */
 
+
+/* START: Ad Container Styles */
+.ad-container{
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+  @apply xl:flex-row flex-col items-start justify-start gap-y-2.5 text-black-100;
+}
+/* END: Ad Container Styles */
+
 /* START: Home styles */
 
 .home__text-container {
