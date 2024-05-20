@@ -30,7 +30,7 @@ const AdDisplay = () => {
 
         setAdData(response.data);
       } catch (error) {
-        console.error("Error fetching ad data:", error);
+        console.error(error);
       }
     };
 
@@ -40,14 +40,9 @@ const AdDisplay = () => {
   const { link, alt, href, message } = adData;
 
   return (
-    <div className="ad-container flex flex-col items-center justify-center gap-y-2.5 text-black xl:flex-row h-64 w-72 mx-auto">
-      <h2 className="headerText">{message || "Loading advertisement..."}</h2>
-      <a
-        className="anchorElement"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    <div className="ad-container flex flex-col items-center justify-center gap-y-2.5 text-black-100 xl:flex-row h-64 w-72 mx-auto">
+      <h2 className="headerText">{message}</h2>
+      <a className="anchorElement" href={href} target="_blank" rel="noopener noreferrer">
         <img
           className="advertIMG"
           src={link || "https://via.placeholder.com/250"}
